@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": "airbnb-base",
+    "overrides": [
+        // {
+        //     "files": ["**/*.test.js"],
+        //     "plugins": ["jest"],
+        //     "extends": ["plugin:jest/recommended"],
+        //     "rules": { "jest/prefer-expect-assertions": "off" }
+        // }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+
+    "rules": {
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+        ],
+        "no-unused-expressions": "off",
+        "object-curly-newline": "off",
+        "no-alert": 0,
+        "no-plusplus": 0,
+        "no-underscore-dangle": 0,
+        "import/no-extraneous-dependencies": [
+            "error",
+            {"devDependencies":  true}
+        ],
+        "no-param-reassign": ["error", { "props": false }]
+    }
+}
